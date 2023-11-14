@@ -1,0 +1,48 @@
+/* Imports */
+@import './assets/scss/variables';
+@import './assets/scss/utilities';
+
+/* Generals */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $darkColor;
+  font-family: $fontFamily;
+  color: $secondaryColor;
+  font-size: $fontSize;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+@import './assets/scss/newsletter';
+@import './assets/scss/button';
+@import './assets/scss/confirm-message';

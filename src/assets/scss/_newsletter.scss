@@ -1,0 +1,149 @@
+.showcase {
+  width: 100%;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.newsletter {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.5rem 1.5rem;
+  line-height: 1.5;
+
+  h1 {
+    font-size: 1.7rem;
+    margin: 0.5rem;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  .list {
+    li {
+      display: flex;
+      margin-bottom: 1rem;
+      img {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+    label {
+      font-size: $fontSmall;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      height: 2.5rem;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem 1rem;
+      border: 1px solid lighten($greyColor, 30%);
+      border-radius: 0.5rem;
+      font-size: $fontSmall;
+      font-weight: 400;
+
+      &::placeholder {
+        color: lighten($greyColor, 10%);
+        font-weight: 400;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input.error {
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+
+      &::placeholder {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+@media (min-width: $mobile) {
+  .newsletter {
+    padding-top: 1.5rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+
+    .list {
+      li {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    form {
+      padding: 1.5rem 0;
+    }
+  }
+}
+
+@media (min-width: $mobile) and (max-height: 700px) {
+  .newsletter {
+    padding-top: 0;
+
+    h1 {
+      font-size: 1.7rem;
+      margin: 0.5rem 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .list {
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    form {
+      padding: 1.5rem 0;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .showcase {
+    height: 95%;
+    border-radius: 1rem;
+    margin: 0 1.1rem 0 1.5rem;
+  }
+
+  .newsletter {
+    h1 {
+      font-size: 2.5rem;
+      align-self: center;
+    }
+  }
+}
